@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Lesson 16: backtracking and dynamic programming.
+// Lesson 16: backtracking and dynamic programming. Practice: practice-questions.md#16-backtracking-and-dynamic-programming.
 public class sixteenth {
     public static void main(String[] args) {
         System.out.println("Subsets of [1, 2, 3]:");
@@ -35,6 +35,9 @@ public class sixteenth {
 
     // Memoization is top-down DP: cache each overlapping subproblem once.
     public static long fibonacciMemo(int index, long[] memo) {
+        if (index < 0 || index > 92 || memo == null || memo.length <= index) {
+            throw new IllegalArgumentException("index must be 0..92 and memo must have index + 1 entries");
+        }
         if (index <= 1) return index;
         if (memo[index] != -1) return memo[index];
         memo[index] = fibonacciMemo(index - 1, memo) + fibonacciMemo(index - 2, memo);
@@ -43,6 +46,9 @@ public class sixteenth {
 
     // Tabulation is bottom-up DP: solve smaller states before larger states.
     public static long fibonacciTabulated(int index) {
+        if (index < 0 || index > 92) {
+            throw new IllegalArgumentException("index must be between 0 and 92");
+        }
         if (index <= 1) return index;
         long previous = 0;
         long current = 1;
@@ -56,6 +62,14 @@ public class sixteenth {
 
     // Unbounded coin change: dp[value] is the fewest coins needed for that value.
     public static int minimumCoins(int[] coins, int amount) {
+        if (coins == null || amount < 0) {
+            throw new IllegalArgumentException("coins must not be null and amount must be non-negative");
+        }
+        for (int coin : coins) {
+            if (coin <= 0) {
+                throw new IllegalArgumentException("coin denominations must be positive");
+            }
+        }
         int impossible = amount + 1;
         int[] dp = new int[amount + 1];
         for (int value = 1; value <= amount; value++) {

@@ -1,4 +1,4 @@
-// Lesson 11: linked lists and node references.
+// Lesson 11: linked lists and node references. Practice: practice-questions.md#11-linked-lists.
 public class eleventh {
     public static void main(String[] args) {
         Node head = new Node(10);

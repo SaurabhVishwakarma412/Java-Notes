@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-// Lesson 9: HashMap and HashSet for fast lookup and counting.
+// Lesson 9: HashMap and HashSet for fast lookup and counting. Practice: practice-questions.md#9-hash-maps-and-sets.
 public class ninth {
     public static void main(String[] args) {
         String[] words = {"cat", "dog", "cat", "bird", "dog", "cat"};

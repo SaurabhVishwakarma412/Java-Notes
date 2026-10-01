@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
 
-// Lesson 15: graph representation, breadth-first search, and depth-first search.
+// Lesson 15: graph representation, breadth-first search, and depth-first search. Practice: practice-questions.md#15-graphs.
 public class fifteenth {
     public static void main(String[] args) {
         int vertexCount = 6;
@@ -27,11 +27,14 @@ public class fifteenth {
     }
 
     public static void addUndirectedEdge(List<List<Integer>> graph, int left, int right) {
+        validateVertex(graph, left);
+        validateVertex(graph, right);
         graph.get(left).add(right);
         graph.get(right).add(left);
     }
 
     public static List<Integer> breadthFirst(List<List<Integer>> graph, int start) {
+        validateVertex(graph, start);
         List<Integer> order = new ArrayList<Integer>();
         boolean[] visited = new boolean[graph.size()];
         Queue<Integer> pending = new ArrayDeque<Integer>();
@@ -51,6 +54,7 @@ public class fifteenth {
     }
 
     public static List<Integer> depthFirst(List<List<Integer>> graph, int start) {
+        validateVertex(graph, start);
         List<Integer> order = new ArrayList<Integer>();
         boolean[] visited = new boolean[graph.size()];
         visitDepthFirst(graph, start, visited, order);
@@ -70,6 +74,7 @@ public class fifteenth {
 
     // In an unweighted graph, BFS finds shortest path lengths measured in edges.
     public static int[] distances(List<List<Integer>> graph, int start) {
+        validateVertex(graph, start);
         int[] distance = new int[graph.size()];
         Arrays.fill(distance, -1);
         Queue<Integer> pending = new ArrayDeque<Integer>();
@@ -85,5 +90,11 @@ public class fifteenth {
             }
         }
         return distance;
+    }
+
+    private static void validateVertex(List<List<Integer>> graph, int vertex) {
+        if (graph == null || vertex < 0 || vertex >= graph.size()) {
+            throw new IllegalArgumentException("vertex must be within the graph");
+        }
     }
 }

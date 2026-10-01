@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-// Lesson 8: ArrayList, List, generics, and dynamic arrays.
+// Lesson 8: ArrayList, List, generics, and dynamic arrays. Practice: practice-questions.md#8-dynamic-arrays-and-lists.
 public class eighth {
     public static void main(String[] args) {
         // Program to the List interface; ArrayList is a common implementation.

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-// Lesson 17: prefix sums, two pointers, and sliding windows.
+// Lesson 17: prefix sums, two pointers, and sliding windows. Practice: practice-questions.md#17-prefix-sums-two-pointers-and-sliding-windows.
 public class seventeenth {
     public static void main(String[] args) {
         int[] values = {2, 4, 1, 7, 3, 6};
@@ -25,6 +25,9 @@ public class seventeenth {
 
     // Inclusive range [left, right]. Validate indexes before calling in production code.
     public static int rangeSum(int[] prefix, int left, int right) {
+        if (prefix == null || left < 0 || right < left || right >= prefix.length - 1) {
+            throw new IllegalArgumentException("range must be valid for the prefix-sum array");
+        }
         return prefix[right + 1] - prefix[left];
     }
 
@@ -33,7 +36,7 @@ public class seventeenth {
         int left = 0;
         int right = sorted.length - 1;
         while (left < right) {
-            int sum = sorted[left] + sorted[right];
+            long sum = (long) sorted[left] + sorted[right];
             if (sum == target) return true;
             if (sum < target) left++;
             else right--;

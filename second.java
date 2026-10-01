@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-// A beginner's guide to arrays in Java.
+// Lesson 2: arrays in Java. Practice: practice-questions.md#2-arrays.
 public class second {
     public static void main(String[] args) {
         // 1. Create an array. Its size is fixed after it is created.

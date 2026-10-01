@@ -1,4 +1,4 @@
-// Lesson 6: algorithm analysis and Big O notation.
+// Lesson 6: algorithm analysis and Big O notation. Practice: practice-questions.md#6-complexity-and-big-o.
 public class sixth {
     public static void main(String[] args) {
         int[] values = {2, 4, 6, 8, 10};

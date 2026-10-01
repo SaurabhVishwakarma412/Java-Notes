@@ -1,7 +1,7 @@
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-// Lesson 13: binary trees, recursion, and breadth-first traversal.
+// Lesson 13: binary trees, recursion, and breadth-first traversal. Practice: practice-questions.md#13-trees.
 public class thirteenth {
     public static void main(String[] args) {
         Node root = new Node(8);

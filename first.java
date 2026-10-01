@@ -2,7 +2,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-// A beginner's guide to Strings in Java.
+// Lesson 1: Strings in Java. Practice: practice-questions.md#1-strings.
 public class first {
     public static void main(String[] args) {
         // 1. A String stores text. String is a class, so a String is an object.

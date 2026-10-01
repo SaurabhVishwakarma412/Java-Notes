@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.StringTokenizer;
 
-// Lesson 19: fast token input for programming contests and large input.
+// Lesson 19: fast token input for programming contests and large input. Practice: practice-questions.md#19-fast-input.
 public class nineteenth {
     public static void main(String[] args) throws IOException {
         // StringReader provides sample input so this lesson runs without waiting for the keyboard.

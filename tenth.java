@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-// Lesson 10: linear search, binary search, and sorting.
+// Lesson 10: linear search, binary search, and sorting. Practice: practice-questions.md#10-searching-and-sorting.
 public class tenth {
     public static void main(String[] args) {
         int[] unsorted = {8, 3, 10, 1, 6};
@@ -11,6 +11,7 @@ public class tenth {
         Arrays.sort(sorted);
         System.out.println("Sorted: " + Arrays.toString(sorted));
         System.out.println("Binary search index: " + Arrays.binarySearch(sorted, 6));
+        System.out.println("Custom binary search index: " + binarySearch(sorted, 6));
         System.out.println("Missing value result: " + Arrays.binarySearch(sorted, 7));
 
         int[] insertionExample = {5, 2, 4, 1, 3};

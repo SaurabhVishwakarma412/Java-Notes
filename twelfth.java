@@ -2,7 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Queue;
 
-// Lesson 12: stacks, queues, and deque operations.
+// Lesson 12: stacks, queues, and deque operations. Practice: practice-questions.md#12-stacks-and-queues.
 public class twelfth {
     public static void main(String[] args) {
         // Stack: last in, first out. Deque is preferred over the legacy Stack class.

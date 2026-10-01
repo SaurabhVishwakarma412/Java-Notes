@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-// Lesson 3: Java fundamentals used in DSA.
+// Lesson 3: Java fundamentals used in DSA. Practice: practice-questions.md#3-java-fundamentals.
 public class third {
 	public static void main(String[] args) {
 		// Primitive values store a value directly. int is the usual whole-number type for DSA.

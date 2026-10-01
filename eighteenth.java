@@ -1,4 +1,4 @@
-// Lesson 18: bitwise operators and common bit tricks.
+// Lesson 18: bitwise operators and common bit tricks. Practice: practice-questions.md#18-bit-manipulation.
 public class eighteenth {
     public static void main(String[] args) {
         int left = 6;  // binary 0110
@@ -28,19 +28,29 @@ public class eighteenth {
     }
 
     public static boolean isBitSet(int value, int bitIndex) {
+        validateBitIndex(bitIndex);
         return (value & (1 << bitIndex)) != 0;
     }
 
     public static int setBit(int value, int bitIndex) {
+        validateBitIndex(bitIndex);
         return value | (1 << bitIndex);
     }
 
     public static int clearBit(int value, int bitIndex) {
+        validateBitIndex(bitIndex);
         return value & ~(1 << bitIndex);
     }
 
     public static int toggleBit(int value, int bitIndex) {
+        validateBitIndex(bitIndex);
         return value ^ (1 << bitIndex);
+    }
+
+    private static void validateBitIndex(int bitIndex) {
+        if (bitIndex < 0 || bitIndex >= Integer.SIZE) {
+            throw new IllegalArgumentException("bit index must be between 0 and 31");
+        }
     }
 
     public static boolean isPowerOfTwo(int value) {

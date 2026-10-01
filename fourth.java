@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-// Lesson 4: methods, parameters, return values, and scope.
+// Lesson 4: methods, parameters, return values, and scope. Practice: practice-questions.md#4-methods.
 public class fourth {
     public static void main(String[] args) {
         int[] values = {3, 7, 2, 9};

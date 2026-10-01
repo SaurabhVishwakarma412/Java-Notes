@@ -1,4 +1,4 @@
-// Lesson 5: recursion and how to reason about recursive methods.
+// Lesson 5: recursion and how to reason about recursive methods. Practice: practice-questions.md#5-recursion.
 public class fifth {
     public static void main(String[] args) {
         System.out.println("5! = " + factorial(5));
